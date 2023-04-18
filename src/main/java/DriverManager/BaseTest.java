@@ -1,7 +1,6 @@
 package DriverManager;
 
-import Pages.HomePage;
-import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -11,8 +10,7 @@ import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.*;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -26,58 +24,50 @@ public class BaseTest {
     public Properties properties = new Properties();
     public InputStream inputStream;
 
-    public BaseTest(){
+    public BaseTest() {
         PageFactory.initElements(driver, this);
     }
 
     @BeforeMethod(alwaysRun = true)
-    public WebDriver setUpDriver() throws IOException {
+    @Parameters("browser")
+    public WebDriver setUpDriver(String browser) throws IOException {
 
         String propname = "config.properties";
         inputStream = getClass().getClassLoader().getResourceAsStream(propname);
         properties.load(inputStream);
 
         if (driver == null) {
-            switch (properties.getProperty("browsername")) {
+            switch (browser) {
                 case "chrome":
                     driver = new ChromeDriver();
-                    driver.manage().deleteAllCookies();
-                    driver.manage().window().maximize();
-                    wait = new WebDriverWait(driver, Duration.ofSeconds(10));
                     break;
 
                 case "firefox":
                     driver = new FirefoxDriver();
-                    driver.manage().deleteAllCookies();
-                    driver.manage().window().maximize();
-                    wait = new WebDriverWait(driver, Duration.ofSeconds(10));
                     break;
 
                 case "edge":
                     driver = new EdgeDriver();
-                    driver.manage().deleteAllCookies();
-                    driver.manage().window().maximize();
-                    wait = new WebDriverWait(driver, Duration.ofSeconds(10));
                     break;
 
                 case "safari":
                     driver = new SafariDriver();
-                    driver.manage().deleteAllCookies();
-                    driver.manage().window().maximize();
-                    wait = new WebDriverWait(driver, Duration.ofSeconds(10));
                     break;
             }
         }
+        driver.manage().deleteAllCookies();
+        driver.manage().window().maximize();
+        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         return driver;
     }
 
-    @AfterMethod(alwaysRun = true)
+    @AfterMethod
     public void tearDown() {
         driver.quit();
     }
 
     public void loadPage() {
-        driver.get("https://defense.otokar.com.tr");
+        driver.get(properties.getProperty("url"));
     }
 
     public void waitForVisibility(WebElement e) {
@@ -93,6 +83,11 @@ public class BaseTest {
     public void type(WebElement e, String txt) {
         waitForVisibility(e);
         e.sendKeys(txt);
+    }
+
+    public void scrollDown(){
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollTo(0, document.body.scrollHeight);");
     }
 
 
