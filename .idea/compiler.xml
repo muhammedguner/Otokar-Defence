@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="Otokar Defense" />
         <module name="Otokar Defence" />
+        <module name="Otokar" />
       </profile>
     </annotationProcessing>
   </component>
