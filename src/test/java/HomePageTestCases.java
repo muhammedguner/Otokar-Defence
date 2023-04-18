@@ -5,7 +5,6 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import javax.swing.*;
 import java.lang.reflect.Method;
 
 public class HomePageTestCases extends BaseTest {
@@ -13,15 +12,29 @@ public class HomePageTestCases extends BaseTest {
     HomePage homePage;
     SearchResultsPage searchResultsPage;
 
+
     @BeforeMethod
-    public void beforeTest(Method m) {
+    public void beforeMethod(Method m) {
         System.out.println("\n" + "********** Starting Test: " + m.getName() + " **********" + "\n");
         homePage = new HomePage();
         searchResultsPage = new SearchResultsPage();
     }
 
-    @Test
-    public void firstTest() throws InterruptedException {
+    @Test(priority = 1)
+    public void validateHomePage(){
+
+        loadPage();
+        homePage.
+                acceptCookies().
+                clickArma().
+                clickTulpar().
+                clickHaberler().
+                clickHamburgerBtn().
+                clicktekerlekliZirhliAraclar();
+    }
+
+    @Test(priority = 2)
+    public void validateSearchAndResultPages() throws InterruptedException {
         loadPage();
         homePage.
                 acceptCookies();

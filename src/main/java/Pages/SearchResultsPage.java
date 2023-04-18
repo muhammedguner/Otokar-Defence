@@ -26,7 +26,8 @@ public class SearchResultsPage extends BaseTest {
     WebElement borderText;
 
 
-    public SearchResultsPage validatePageText() {
+
+    public SearchResultsPage validatePageText(){
         String a = borderText.getText();
         Assert.assertEquals(a, "ARAMA SONUÇLARI");
         return this;

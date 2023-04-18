@@ -28,8 +28,8 @@ public class BaseTest {
         PageFactory.initElements(driver, this);
     }
 
-    @BeforeMethod(alwaysRun = true)
     @Parameters("browser")
+    @BeforeMethod
     public WebDriver setUpDriver(String browser) throws IOException {
 
         String propname = "config.properties";
@@ -55,15 +55,17 @@ public class BaseTest {
                     break;
             }
         }
-        driver.manage().deleteAllCookies();
-        driver.manage().window().maximize();
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        driver.manage().window().maximize();
         return driver;
+
     }
 
     @AfterMethod
-    public void tearDown() {
-        driver.quit();
+    public void quitDriver() {
+        driver.manage().deleteAllCookies();
+         driver.quit();
+        driver = null;
     }
 
     public void loadPage() {
@@ -85,7 +87,7 @@ public class BaseTest {
         e.sendKeys(txt);
     }
 
-    public void scrollDown(){
+    public void scrollDown() {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollTo(0, document.body.scrollHeight);");
     }
