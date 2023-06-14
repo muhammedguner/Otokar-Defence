@@ -1,5 +1,6 @@
 package DriverManager;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -16,6 +17,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.time.Duration;
 import java.util.Properties;
+
+
 
 public class BaseTest {
 
@@ -39,18 +42,22 @@ public class BaseTest {
         if (driver == null) {
             switch (browser) {
                 case "chrome":
+                    WebDriverManager.chromedriver().setup();
                     driver = new ChromeDriver();
                     break;
 
                 case "firefox":
+                    WebDriverManager.firefoxdriver().setup();
                     driver = new FirefoxDriver();
                     break;
 
                 case "edge":
+                    WebDriverManager.edgedriver().setup();
                     driver = new EdgeDriver();
                     break;
 
                 case "safari":
+                    WebDriverManager.safaridriver().setup();
                     driver = new SafariDriver();
                     break;
             }
@@ -66,6 +73,10 @@ public class BaseTest {
         driver.manage().deleteAllCookies();
          driver.quit();
         driver = null;
+    }
+
+    public WebDriver getDriver() {
+        return driver;
     }
 
     public void loadPage() {
