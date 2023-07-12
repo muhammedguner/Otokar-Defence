@@ -30,7 +30,7 @@ public class HomePage extends BaseTest {
     @FindBy(xpath = "(//*[@class=\"icon icon-close\"])[3]")
     public WebElement cookiesClose;
 
-    @FindBy(xpath = "(//*[@class=\"btn btn-addon primary second-medium\"])[1]")
+    @FindBy(xpath = "//*[.=\"Tüm Çerezleri Kabul Et\"]")
     public WebElement cookiesAccept;
     @FindBy (xpath = "(//*[@class=\"icon icon-arrow-right\"])[1]")
     public WebElement slider1;
@@ -75,9 +75,9 @@ public class HomePage extends BaseTest {
 
     @FindBy(xpath = "//*[text()=\"KENT CNG KÖRÜKLÜ\"]")
     public WebElement kentCNGKoruklu;
-    @FindBy(xpath = "//*[text()=\"Territo U\"]")
+    @FindBy(xpath = "(//*[.='Territo U'])[2]")
     public WebElement territoU;
-    @FindBy(xpath = "//*[text()=\"KENT U\"]")
+    @FindBy(xpath = "(//*[text()='KENT U'])[1]")
     public WebElement kentU;
 
     @FindBy(xpath = "//*[text()=\"DORUK LE\"]")
@@ -168,6 +168,107 @@ public class HomePage extends BaseTest {
 
     @FindBy(xpath = "(//*[.=\"Servis Bul\"])[1]")
     public WebElement servisBul;
+
+    //ARGE SAYFASI
+
+    @FindBy(xpath = "(//*[text()='Detaylı Bilgi'])[10]")
+    public WebElement detayliBilgiButtonArge;
+
+    @FindBy(xpath = "(//*[@class='nav-link'])[22]")
+    public WebElement urunGelistirmeButton;
+
+    @FindBy(xpath = "(//*[@class='nav-link'])[23]")
+    public WebElement bilgisayarDestekliMuhButton;
+
+    @FindBy(xpath = "(//*[@target='_self'])[1]")
+    public WebElement argeBasvuruFormu;
+
+    @FindBy(xpath = "(//*[@target='_self'])[2]")
+    public WebElement argeMusteriSikayetYonSureci;
+
+    @FindBy(xpath = "(//*[@target='_blank'])[4]")
+    public WebElement argeMusteriSikayetFormu;
+
+    @FindBy(xpath = "//*[text()='Tüm Çerezleri Kabul Et']")
+    public WebElement argeCookie;
+
+    @FindBy(xpath = "(//*[@class='owl-prev'])[4]")
+    public WebElement argeSliderPrev;
+
+    @FindBy(xpath = "(//*[@class='owl-next'])[4]")
+    public WebElement argeSliderNext;
+
+    @FindBy(xpath = "(//*[@class='current-item'])[3]")
+    public WebElement argeSliderIlkSayfa;
+
+    @FindBy(xpath = "(//*[@class='icon icon-long-arrow-up'])")
+    public WebElement argeYukariButton;
+
+    @FindBy(xpath = "(//*[@class='owl-prev'])[2]")
+    public WebElement yapisalDayanimSliderPrev;
+
+    @FindBy(xpath = "(//*[@class='owl-next'])[2]")
+    public WebElement yapisalDayanimSliderNext;
+
+    @FindBy(xpath = "(//*[@class='current-item'])[1]")
+    public WebElement yapisalDayanimIlkSlider;
+
+    @FindBy(xpath = "(//*[@class='owl-prev'])[4]")
+    public WebElement nvhAnalizSliderPrev;
+
+    @FindBy(xpath = "(//*[@class='owl-next'])[4]")
+    public WebElement nvhAnalizSliderNext;
+
+    @FindBy(xpath = "(//*[@class='current-item'])[2]")
+    public WebElement nvhAnalizIlkSlider;
+
+    @FindBy(xpath = "(//*[@class='owl-prev'])[6]")
+    public WebElement carpismaGuvenlikSliderPrev;
+
+    @FindBy(xpath = "(//*[@class='owl-next'])[6]")
+    public WebElement carpismaGuvenlikSliderNext;
+
+    @FindBy(xpath = "(//*[@class='current-item'])[3]")
+    public WebElement carpismaGuvenlikIlkSlider;
+
+    @FindBy(xpath = "(//*[@class='owl-prev'])[8]")
+    public WebElement hadSliderPrev;
+
+    @FindBy(xpath = "(//*[@class='owl-next'])[8]")
+    public WebElement hadSliderNext;
+
+    @FindBy(xpath = "(//*[@class='current-item'])[4]")
+    public WebElement hadIlkSlider;
+
+    @FindBy(xpath = "//*[text()=\"Çerez Aydınlatma Metni\"]")
+    public WebElement cerezAydinlatmametni;
+
+    @FindBy(xpath = "//*[text()=\"Gizlilik ve Telif Hakları\"]")
+    public WebElement telifHaklari;
+
+    @FindBy(xpath = "//*[text()=\"Kişisel Verilerin Korunması\"]")
+    public WebElement kisiselVeriler;
+
+    @FindBy(xpath = "//*[@class=\"report-card\"]")
+    public WebElement cerezIndirMetin;
+
+    @FindBy(xpath = "(//*[text()=\"Kişisel Verilerin Korunması Politikası\"])[1]")
+    public WebElement kisiselVerilerIndir;
+
+    @FindBy(xpath = "(//*[text()=\"Veri Sahibi Başvuru Formu\"])[1]")
+    public WebElement veriSahibiIndir;
+
+    @FindBy(xpath = "//*[text()=\"İndir\"]")
+    public WebElement Indir;
+
+    @FindBy(xpath = "(//*[@class=\"icon icon-search\"])[1]")
+    public WebElement aramaButonu;
+
+    @FindBy(xpath = "(//*[@class=\"form-control\"])[2]")
+    public WebElement arama;
+
+    @FindBy(xpath = "(//*[text()=\"Arama Sonuçları\"])[2]")
+    public WebElement aramaSonuclari;
 
 
 

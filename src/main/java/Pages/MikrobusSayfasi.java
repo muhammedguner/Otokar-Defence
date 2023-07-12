@@ -6,10 +6,8 @@ import org.openqa.selenium.support.FindBy;
 
 public class MikrobusSayfasi extends BaseTest {
 
-    //@FindBy(xpath = "//*[text()=\"Yakıt Tipi\"]")
-   // public WebElement yakitTipi;
-    @FindBy(xpath = "//h4[contains(text(),'Yakıt Tipi')]")
-    public WebElement yakitTipi;
+   @FindBy (xpath = "//*[.=\"Yakıt Tipi\"]")
+   public WebElement yakitTipi;
     @FindBy(xpath = "//*[.=\"Maksimum Güç\"]")
     public WebElement maksimumGuc;
 
@@ -23,11 +21,11 @@ public class MikrobusSayfasi extends BaseTest {
     public WebElement yollarinmodernYuzu;
     @FindBy(xpath = "(//*[.=\"SESSİZ VE ÇEVRECİ\"])[3]")
     public WebElement sessizVeCevreci;
-    @FindBy(xpath = "(//*[.=\"KONFOR\"])[3]")
+    @FindBy(xpath = "(//*[.=\"KONFOR\"])[4]")
     public WebElement konfor;
     @FindBy(xpath = "(//*[.=\"MAZİYE SELAM\"])[3]")
     public WebElement maziyeSelam;
-    @FindBy(xpath = "(//*[.=\"Galeri\"])[3]")
+    @FindBy(xpath = "(//*[.=\"Galeri\"])[4]")
     public WebElement galeri;
     @FindBy(xpath = "(//*[.=\"Araç Broşürü\"])[2]")
     public WebElement aracBrosuru;

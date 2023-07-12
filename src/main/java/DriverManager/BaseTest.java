@@ -80,7 +80,7 @@ public class BaseTest {
 
     @AfterMethod
     public void quitDriver() {
-        driver.manage().deleteAllCookies();
+       // driver.manage().deleteAllCookies();
          driver.quit();
         driver = null;
     }
