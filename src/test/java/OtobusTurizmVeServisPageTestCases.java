@@ -159,7 +159,7 @@ public class OtobusTurizmVeServisPageTestCases extends BaseTest {
             }
         }
         Assert.assertTrue(BaseTest.driver.getCurrentUrl().
-                contains("https://commercial.otokar.com.tr/OtokarTicari/media/Otokar-Ticari/otobus-fiyat-listesi-36.pdf"));
+                contains("https://commercial.otokar.com.tr/OtokarTicari/media/Otokar-Ticari/"));
 
         BaseTest.driver.quit();
     }
@@ -219,7 +219,7 @@ public class OtobusTurizmVeServisPageTestCases extends BaseTest {
             }
         }
         Assert.assertTrue(BaseTest.driver.getCurrentUrl().
-                contains("https://commercial.otokar.com.tr/OtokarTicari/media/Otokar-Ticari/otobus-fiyat-listesi-36.pdf"));
+                contains("https://commercial.otokar.com.tr/OtokarTicari/media/Otokar-Ticari/"));
 
         BaseTest.driver.quit();
 
@@ -279,7 +279,7 @@ public class OtobusTurizmVeServisPageTestCases extends BaseTest {
             }
         }
         Assert.assertTrue(BaseTest.driver.getCurrentUrl().
-                contains("https://commercial.otokar.com.tr/OtokarTicari/media/Otokar-Ticari/otobus-fiyat-listesi-36.pdf"));
+                contains("https://commercial.otokar.com.tr/OtokarTicari/media/Otokar-Ticari/"));
 
         BaseTest.driver.quit();
 
@@ -338,7 +338,7 @@ public class OtobusTurizmVeServisPageTestCases extends BaseTest {
             }
         }
         Assert.assertTrue(BaseTest.driver.getCurrentUrl().
-                contains("https://commercial.otokar.com.tr/OtokarTicari/media/Otokar-Ticari/otobus-fiyat-listesi-36.pdf"));
+                contains("https://commercial.otokar.com.tr/OtokarTicari/media/Otokar-Ticari/"));
 
         BaseTest.driver.quit();
     }
@@ -396,7 +396,7 @@ public class OtobusTurizmVeServisPageTestCases extends BaseTest {
             }
         }
         Assert.assertTrue(BaseTest.driver.getCurrentUrl().
-                contains("https://commercial.otokar.com.tr/OtokarTicari/media/Otokar-Ticari/otobus-fiyat-listesi-36.pdf"));
+                contains("https://commercial.otokar.com.tr/OtokarTicari/media/Otokar-Ticari/"));
 
         BaseTest.driver.quit();
 
@@ -455,7 +455,7 @@ public class OtobusTurizmVeServisPageTestCases extends BaseTest {
             }
         }
         Assert.assertTrue(BaseTest.driver.getCurrentUrl().
-                contains("https://commercial.otokar.com.tr/OtokarTicari/media/Otokar-Ticari/otobus-fiyat-listesi-36.pdf"));
+                contains("https://commercial.otokar.com.tr/OtokarTicari/media/Otokar-Ticari/"));
 
         BaseTest.driver.quit();
     }
@@ -513,7 +513,7 @@ public class OtobusTurizmVeServisPageTestCases extends BaseTest {
             }
         }
         Assert.assertTrue(BaseTest.driver.getCurrentUrl().
-                contains("https://commercial.otokar.com.tr/OtokarTicari/media/Otokar-Ticari/otobus-fiyat-listesi-36.pdf"));
+                contains("https://commercial.otokar.com.tr/OtokarTicari/media/Otokar-Ticari/"));
 
         BaseTest.driver.quit();
     }

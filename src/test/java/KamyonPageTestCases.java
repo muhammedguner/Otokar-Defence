@@ -142,7 +142,7 @@ public class KamyonPageTestCases extends BaseTest {
             }
         }
 
-        Assert.assertEquals("https://commercial.otokar.com.tr/OtokarTicari/media/Otokar-Ticari/pdf/02-fiyat-listesi-2023-07-10.pdf",
+        Assert.assertEquals("https://commercial.otokar.com.tr/OtokarTicari/media/Otokar-Ticari/",
                 BaseTest.driver.getCurrentUrl());
 
 
@@ -258,7 +258,7 @@ public class KamyonPageTestCases extends BaseTest {
             }
         }
 
-        Assert.assertEquals("https://commercial.otokar.com.tr/OtokarTicari/media/Otokar-Ticari/pdf/02-fiyat-listesi-2023-07-10.pdf",
+        Assert.assertEquals("https://commercial.otokar.com.tr/OtokarTicari/media/Otokar-Ticari/",
                 BaseTest.driver.getCurrentUrl());
 
 

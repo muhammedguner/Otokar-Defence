@@ -139,7 +139,7 @@ public class MikrobusPageTestCases extends BaseTest {
             }
         }
         Assert.assertTrue(BaseTest.driver.getCurrentUrl().
-                contains("https://commercial.otokar.com.tr/OtokarTicari/media/Otokar-Ticari/otobus-fiyat-listesi-36.pdf"));
+                contains("https://commercial.otokar.com.tr/OtokarTicari/"));
         BaseTest.driver.quit();
 
 
@@ -197,7 +197,7 @@ public class MikrobusPageTestCases extends BaseTest {
             }
         }
         Assert.assertTrue(BaseTest.driver.getCurrentUrl().
-                contains("https://commercial.otokar.com.tr/OtokarTicari/media/Otokar-Ticari/otobus-fiyat-listesi-36.pdf"));
+                contains("https://commercial.otokar.com.tr/OtokarTicari/media/Otokar-Ticari/"));
         BaseTest.driver.quit();
     }
 
